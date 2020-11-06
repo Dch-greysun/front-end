@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    //求1-100之间所有数的总和与平均数
+    //注意：n在末尾会导致循环失败时，n的值比要求的值要大1，记得减掉
+    var numsum = 0;
+    var numaverage = 0;
+    var n = 1;
+    for (i = 0; i < 100; i++) {
+        numsum += n;
+        n++;
+    }
+    numaverage = numsum / (n - 1);
+    console.log(numsum);
+    console.log(numaverage);
+</script>
+
+</html>

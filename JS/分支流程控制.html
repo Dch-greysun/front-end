@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    //比较两个数的最大值 （用户依次输入2个值，最后弹出最大的那个值）
+    var a = prompt('请输入一个数：');
+    var b = prompt('请输入一个数：');
+    var max = '';
+    a > b ? max = a : max = b;
+    alert('较大的那个数是' + max + '!');
+
+    //用户输入一个数，来判断是奇数还是偶数
+    var num1 = prompt('请输入一个数：');
+    if (num1 % 2 === 0) {
+        alert('这个数是偶数!');
+    } else {
+        alert('这个数是奇数!');
+    }
+
+    //根据用户输入的数值（数字1 到 数字 7），返回星期几
+    var num2 = prompt('请输入数字1到数字7之间的一个数：');
+    switch (num2) {
+        case ('1'):
+            alert('这代表星期一。');
+            break;
+        case ('2'):
+            alert('这代表星期二。');
+            break;
+        case ('3'):
+            alert('这代表星期三。');
+            break;
+        case ('4'):
+            alert('这代表星期四。');
+            break;
+        case ('5'):
+            alert('这代表星期五。');
+            break;
+        case ('6'):
+            alert('这代表星期六。');
+            break;
+        case ('7'):
+            alert('这代表星期日。');
+            break;
+    }
+
+    //接收班长口袋里的钱数？若大于等于2000，请大家吃西餐。若小于2000，大于等于1500，请大家吃快餐。若小于1500，大于等于1000，请大家喝饮料。若小于1000，大于等于500，请大家吃棒棒糖。否则提醒班长下次把钱带够
+    var money = prompt('请输入班长口袋里有多少钱：');
+    if (money >= 2000) {
+        alert('班长要请大家吃西餐！');
+    } else if (money >= 1500) {
+        alert('班长要请大家吃快餐！');
+    } else if (money >= 1000) {
+        alert('班长要请大家喝饮料！');
+    } else if (money >= 500) {
+        alert('班长要请大家吃棒棒糖！');
+    } else {
+        alert('班长的钱好像不够哦，下次记得带够钱。')
+    }
+</script>
+
+</html>
