@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    //写一个函数，实现反转任意数组。
+    //另一种写法： for(i = arr.length - 1; i >= 0; i--){newArr[newArr.length] = arr[i]}
+    function reverseArray(arr) {
+        var newArr = [];
+        for (i = 0; i < arr.length; i++) {
+            newArr[i] = arr[arr.length - 1 - i];
+        }
+        return newArr;
+    }
+    var arr1 = reverseArray([4, 5, 3, 6, 42, 63, 2]);
+    console.log(arr1)
+
+    //写一个函数，实现对数字数组的排序。(冒泡排序)
+    function sort(arr) {
+        for (var n = 0; n < arr.length - 1; n++) {
+            for (var j = 0; j < arr.length - n - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+    var arr2 = sort([4, 5, 3, 6, 42, 63, 2]);
+    console.log(arr2)
+</script>
+
+</html>
