@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    //制作一个简易计算器，包含加、减、乘、除运算和退出功能。
+    var homePage = '欢迎使用简易计算器：\n 1.加法运算 \n 2.减法运算 \n 3.乘法运算 \n 4.除法运算 \n 5.退出 \n 请输入您的选项：';
+    var choice = prompt(homePage);
+    var arr = [];
+    var result = 0;
+
+    if (choice != '5') {
+        //输入数字页面
+        var caculatePage = prompt('请输入需要计算的数字（结束请输入“#”键）：');
+        while (caculatePage != '#') {
+            arr.push(caculatePage);
+            var caculatePage = prompt('请输入需要计算的数字（结束请输入“#”键）：');
+            console.log(arr);
+        }
+        console.log(arr);
+
+        //运算程序
+        function plus(num) {
+            for (i = 0; i < num.length; i++) {
+                result += parseInt(num[i]);
+            }
+            return result;
+        }
+
+        function mins(num) {
+            for (i = 0; i < num.length; i++) {
+                result -= parseInt(num[i]);
+            }
+            return result;
+        }
+
+        function subs(num) {
+            result = parseInt(num[0]);
+            for (i = 1; i < num.length; i++) {
+                result -= parseInt(num[i]);
+            }
+            return result;
+        }
+
+        function mult(num) {
+            result = 1;
+            for (i = 0; i < num.length; i++) {
+                result = result * parseInt(num[i]);
+            }
+            return result;
+        }
+
+        function divi(num) {
+            result = parseInt(num[0]);
+            for (i = 1; i < num.length; i++) {
+                result = result / parseInt(num[i]);
+            }
+            return result;
+        }
+        //输出结果
+        switch (choice) {
+            case ('1'):
+                var results = plus(arr);
+                alert('计算结果为：' + results);
+                break;
+            case ('2'):
+                var results = subs(arr);
+                alert('计算结果为：' + results);
+                break;
+            case ('3'):
+                var results = mult(arr);
+                alert('计算结果为：' + results);
+                break;
+            case ('4'):
+                var results = divi(arr);
+                alert('计算结果为：' + results);
+                break;
+        }
+    } else {
+        alert('感谢您的使用，欢迎下次再来！');
+    }
+</script>
+
+</html>
