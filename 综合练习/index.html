@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合练习</title>
+    <style>
+        .active {
+            background-color: red;
+            color: cornflowerblue;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!--要求将数组内的电影展示到页面上，当选中某个电影，电影背景变红，字体变为蓝色。
+    默认第一部电影的背景为红色。-->
+    <div id="app">
+        <ul>
+            <li v-for='(item, index) in movies' @click='cliMovie(index)' :class='{active: currentIndex === index}'>
+                {{item}}
+            </li>
+        </ul>
+
+
+    </div>
+    <script src="../综合练习/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                movies: ['复仇者联盟', '蝙蝠侠', '蜘蛛侠', '美国队长', '奇异博士'],
+                currentIndex: 0,
+            },
+            methods: {
+                cliMovie(index) {
+                    this.currentIndex = index;
+                },
+            }
+        })
+    </script>
+
+</body>
+
+</html>
